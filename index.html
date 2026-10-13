@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>主委茶葉蛋｜古早味滷蛋．慢火入味</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="promo">每週二、四低溫宅配出貨｜價格暫定，示範網站不實際收款</div>
+<header class="nav">
+  <a class="logo" href="#"><img src="images/logo-seal.jpg" alt="主委茶葉蛋 印章商標"><span>主委茶葉蛋</span></a>
+  <nav><a href="#products">商品</a><a href="#shipping">配送</a><a href="#detail">食品標示</a><a href="#checkout">結帳</a></nav>
+  <button class="cart-btn" onclick="toggleCart()">購物車 <span id="cartCount">0</span></button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">主委掛保證</p>
+    <h1>主委茶葉蛋</h1>
+    <p class="sub">古早味滷蛋．慢火入味</p>
+    <ul class="points"><li>每週現滷</li><li>剝殼即食</li><li>冷藏直送</li></ul>
+    <a class="btn" href="#products">立即選購</a>
+  </div>
+  <img class="mascot" src="images/mascot.jpg" alt="主委茶葉蛋吉祥物">
+</section>
+
+<section class="story">
+  <h2>品牌故事</h2>
+  <p>小木的爸爸是廟裡的主委，這是他做來賣的茶葉蛋。</p>
+</section>
+
+<section class="features">
+  <div><h3>每週現滷</h3><p>每週滷製，不是常溫久放的工廠蛋。滷製時間【待填】。</p></div>
+  <div><h3>剝殼即食</h3><p>已剝殼，退冰或微溫即可食用。</p></div>
+  <div><h3>冷藏直送</h3><p>全程低溫宅配，收到請立即冷藏。</p></div>
+  <div><h3>獨立真空包</h3><p>每顆獨立真空包裝，外層為夾鏈真空袋。</p></div>
+</section>
+
+<section id="products">
+  <h2>商品（原味）</h2>
+  <p class="note">※ 價格為暫定（範例價格），含運組合價；滿額免運門檻【待定】</p>
+  <div class="grid" id="productGrid"></div>
+  <div class="concept"><img src="images/box-mockup.jpg" alt="禮盒包裝概念圖"><p><b>禮盒包裝概念圖（僅供參考）</b><br>目前出貨包裝為夾鏈真空袋，禮盒尚未推出。</p></div>
+</section>
+
+<section id="shipping" class="features">
+  <div><h3>只走低溫宅配</h3><p>黑貓宅急便／新竹物流低溫配送。不提供超商取貨、不提供面交。</p></div>
+  <div><h3>出貨日</h3><p>每週二、四出貨。【截單時間待填】</p></div>
+  <div><h3>保存</h3><p>請冷藏保存，保存期限最多 10 天。</p></div>
+</section>
+
+<section id="detail" class="detail">
+  <h2>商品資訊與食品標示</h2>
+  <table>
+    <tr><th>品名</th><td>主委茶葉蛋（原味）</td></tr>
+    <tr><th>內容物</th><td>雞蛋、茶葉、醬油、【香料，待填】</td></tr>
+    <tr><th>過敏原</th><td><b>本產品含蛋</b>【其他過敏原如大豆（醬油）、小麥，待確認】</td></tr>
+    <tr><th>淨重</th><td>每顆約【XX】公克（待填）</td></tr>
+    <tr><th>保存期限</th><td>冷藏最多 10 天，有效日期詳見包裝標示</td></tr>
+    <tr><th>保存方式</th><td>請冷藏 0–7°C 保存，收到後請立即冷藏</td></tr>
+    <tr><th>包裝</th><td>每顆獨立真空包裝，外層夾鏈真空袋</td></tr>
+    <tr><th>製造者</th><td>【名稱】／【電話】／【地址】（待填）</td></tr>
+    <tr><th>原產地</th><td>臺灣（待確認）</td></tr>
+    <tr><th>營養標示</th><td>每份【XX】公克，熱量【XX】大卡、蛋白質【XX】公克、脂肪【XX】公克、碳水化合物【XX】公克、鈉【XX】毫克（待檢驗）</td></tr>
+  </table>
+</section>
+
+<section id="checkout">
+  <h2>結帳</h2>
+  <form id="orderForm">
+    <label>姓名<input name="name" required></label>
+    <label>手機<input name="phone" type="tel" pattern="09\d{8}" placeholder="09xxxxxxxx" required></label>
+    <fieldset><legend>配送方式：低溫宅配（含運）</legend>
+      <label class="inline"><input type="radio" name="carrier" value="黑貓宅急便" checked> 黑貓宅急便</label>
+      <label class="inline"><input type="radio" name="carrier" value="新竹物流"> 新竹物流</label>
+    </fieldset>
+    <label>收件地址<input name="address" required></label>
+    <label>希望出貨日<select name="shipday"><option>最近的週二</option><option>最近的週四</option></select></label>
+    <fieldset><legend>付款方式（需先付款）</legend>
+      <label class="inline"><input type="radio" name="pay" value="銀行轉帳" checked> 銀行轉帳</label>
+      <label class="inline"><input type="radio" name="pay" value="LINE Pay"> LINE Pay</label>
+    </fieldset>
+    <label>備註<textarea name="note"></textarea></label>
+    <label class="inline"><input type="checkbox" required> 我了解易腐食品不適用 7 天鑑賞期</label>
+    <button class="btn" type="submit">送出訂單（示範）</button>
+  </form>
+  <div id="summary" hidden></div>
+</section>
+
+<footer>
+  <div><img class="flogo" src="images/logo-seal.jpg" alt=""><b>主委茶葉蛋</b><p>主委掛保證<br>食品業者登錄字號：【待申請 X-XXXXXXXXX-XXXXX-X】</p></div>
+  <div><b>保存須知</b><p>收到後請立即冷藏（0–7°C），保存期限最多 10 天。開封後請儘速食用。</p></div>
+  <div><b>退換貨說明</b><p>本商品屬易於腐敗之食品，依《通訊交易解除權合理例外情事適用準則》不適用 7 天鑑賞期。商品若有瑕疵請於收到當日聯繫。</p></div>
+  <div><b>追蹤我們</b><p><a href="#">LINE 官方帳號（待建立）</a><br><a href="https://www.tiktok.com/@j3xiao">TikTok @j3xiao</a></p></div>
+</footer>
+
+<aside id="cart" class="cart">
+  <div class="cart-head"><h3>購物車</h3><button onclick="toggleCart()">✕</button></div>
+  <ul id="cartItems"></ul>
+  <p class="total">小計（含運）：NT$<span id="cartTotal">0</span></p>
+  <a class="btn" href="#checkout" onclick="toggleCart()">前往結帳</a>
+</aside>
+<script src="js/app.js"></script>
+</body>
+</html>
